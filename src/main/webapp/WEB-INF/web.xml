@@ -5,6 +5,7 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   
+  <!-- Owner roles -->
   <servlet>
   	<servlet-name>OwnerLogin</servlet-name>
   	<jsp-file>/ownerlogin.jsp</jsp-file>
@@ -34,5 +35,59 @@
   <servlet-mapping>
   	<servlet-name>OwnerHome</servlet-name>
   	<url-pattern>/ownerhome</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>OwnerLogout</servlet-name>
+  	<servlet-class>com.owner.Logout</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>OwnerLogout</servlet-name>
+  	<url-pattern>/ownerlogout</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Manager roles -->
+  <servlet>
+  	<servlet-name>ManagerLogin</servlet-name>
+  	<jsp-file>/managerlogin.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ManagerLogin</servlet-name>
+  	<url-pattern>/managerlogin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ManagerLoginMain</servlet-name>
+  	<servlet-class>com.manager.Login</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ManagerLoginMain</servlet-name>
+  	<url-pattern>/managerLogin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ManagerHome</servlet-name>
+  	<jsp-file>/managerhome.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ManagerHome</servlet-name>
+  	<url-pattern>/managerhome</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ManagerLogout</servlet-name>
+  	<servlet-class>com.manager.Logout</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ManagerLogout</servlet-name>
+  	<url-pattern>/managerlogout</url-pattern>
   </servlet-mapping>
 </web-app>

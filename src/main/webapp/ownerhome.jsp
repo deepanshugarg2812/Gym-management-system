@@ -2,6 +2,12 @@
     pageEncoding="UTF-8"%>
 <%@ page import="com.owner.Owner" %>
 
+<% 
+	if(session.getAttribute("owner")==null){
+		response.sendRedirect("ownerlogin");
+	}
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
